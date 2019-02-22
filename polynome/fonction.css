@@ -1,0 +1,67 @@
+h1 {
+    text-align: center;
+    color: white !important;
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#tete {
+    color: blue !important;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+#entete {
+    color: white !important;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.total {
+    background-image: url("images/font.jpg");
+}
+
+label {
+    color: white;
+    font-size: 18px;
+}
+
+#a {
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+span {
+    color: white;
+}
+
+@keyframes anime {
+    0% {
+        color: firebrick;
+        font-size: 25px;
+    }
+    25% {
+        color: rgb(6, 70, 247);
+        font-weight: bolder;
+    }
+    50% {
+        color: rgb(11, 252, 252);
+    }
+    75% {
+        color: rgb(240, 35, 35);
+    }
+    100% {
+        color: grey;
+    }
+}
+
+span {
+    color: blueviolet !important;
+}
+
+h2 {
+    color: white !important;
+}

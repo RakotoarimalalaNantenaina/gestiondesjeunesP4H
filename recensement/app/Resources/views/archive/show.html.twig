@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+
+    <div class="span10 offset1">
+        <img src="{{ asset('bundles/framework/images/image1.png') }}" id="image" alt="IMAGE"/>
+        <div class="row">
+            <h3 id="h31">Listes des recensements</h3>
+        </div>
+        <div class="form-horizontal">
+            <h4 style="text-decoration-line: underline">Numero de recensement :</h4>
+            <p id="p1">{{ archive.id }}</p>
+        </div>
+        <div class="control-group">
+            <h4 style="text-decoration-line: underline">Nom :</h4>
+            <p id="p1">{{ archive.nom }}</p>
+        </div>
+        <div class="form-horizontal">
+            <div class="control-group">
+                <h4 style="text-decoration-line: underline">Prenom :</h4>
+            <p id="p1">{{ archive.prenom }}</p>
+            </div>
+            <div class="form-horizontal">
+                <div class="control-group">
+                    <h4 style="text-decoration-line: underline">Date de naissance :</h4>
+                <p id="p1">
+                {% if archive.datedenaissance %}{{ archive.datedenaissance|date('Y-m-d') }}
+                        {% endif %}
+                </p>
+            </div>
+            <div class="form-horizontal">
+                <div class="control-group">
+                <h4 style="text-decoration-line: underline">Adresse :</h4>
+                <p id="p1">{{ archive.adresse }}</p>
+            </div>
+            <p>
+                <a href="{{ path('archive_index') }}" class="btn btn-primary">precedent</a><br><br>
+                <a class="btn btn-success" href="{{ path('archive_edit', { 'id': archive.id }) }}">Modifier</a>
+                {{ form_start(delete_form) }}
+                    <input type="submit" value="Supprimer" class="btn btn-danger">
+                {{ form_end(delete_form) }}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

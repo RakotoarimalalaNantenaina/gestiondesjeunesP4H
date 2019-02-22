@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+        <div class="container-fluid" id="totalindex">       
+            <h1 id="h1index">Listes des personnes dejà recensées</h1>
+                <a href="{{ path('archive_new') }}" class="btn btn-info">Ajouter Nouveau recencement</a>
+                <br><br>
+            <table class="table table-bordered table-responsive">
+                <thead>
+                        <tr id="indextr">
+                            <th>Numero</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Date de naissance</th>
+                            <th>Adresse</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for archive in archives %}
+                        <tr id="trindextd">
+                        <td>
+                            <a href="{{ path('archive_show', { 'id': archive.id }) }}">{{ archive.id }}</a>
+                        </td>
+                        <td>{{ archive.nom }}</td>
+                        <td>{{ archive.prenom }}</td>
+                        <td>
+                            {% if archive.datedenaissance %}{{ archive.datedenaissance|date('Y-m-d') }}
+                            {% endif %}
+                        </td>
+                        <td>{{ archive.adresse }}</td>
+                        <td>    
+                            <a href="{{ path('archive_show', { 'id': archive.id }) }}" class="btn btn-primary">Détaillé</a>
+                            <a class="btn btn-success" href="{{ path('archive_edit', { 'id': archive.id }) }}">Modifier</a>
+                        </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                    <img src="{{ asset('bundles/framework/images/image1.png') }}" id="image" alt="IMAGE"/>
+                <br>
+            </div>
+{% endblock %}
+   

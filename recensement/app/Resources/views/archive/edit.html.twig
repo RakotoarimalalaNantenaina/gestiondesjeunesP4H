@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" id="edit">
+                <img src="{{ asset('bundles/framework/images/image1.png') }}" id="image" alt="IMAGE"/>
+                <h1 id="h31">MODIFICATION DE RECENCEMENT</h1>
+        <div class="form-horizontal">
+                <p id="p1">
+                    {{ form_start(edit_form) }}<br>
+                </p>
+                {{ form_widget(edit_form) }}<br>
+                    <input type="submit" value="Modifier" class="btn btn-primary"/><br>
+                {{ form_end(edit_form) }}<br>
+
+                <a href="{{ path('archive_index') }}" class="btn btn-warning">precedent</a>
+    
+                {{ form_start(delete_form) }}<br>
+                    <input type="submit" value="supprimer" class="btn btn-danger">
+                {{ form_end(delete_form) }}
+            </div>
+        </div>
+            <div class="col-md-4"></div>
+        <div>
+    </div>
+    </div>
+    </div> 
+{% endblock %}
+

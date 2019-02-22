@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <html>
+        <head>
+            <title>Recensements</title>
+        </head>
+        <body>
+            <div class="container-fluid" id="total">
+                <h2>Recensement Général de la Population</h2>
+                <nav class="nav navbar-nav navbar-right">
+                    <a class="navbar-brand" href="{{ path('archive_index') }}">ARCHIVE</a>
+                    <a class="navbar-brand" href="{{ path('fos_user_security_login') }}">SE CONNECTER</a>
+                    <a class="navbar-brand" href="{{ path('fos_user_registration_register') }}">s'inscrire</a>
+                    <a class="navbar-brand" href="{{ path('fos_user_profile_edit') }}">Contacter</a>
+                </nav>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ asset('bundles/framework/images/image1.png') }}" id="image" alt="IMAGE"/>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <img src="{{ asset('bundles/framework/images/image.jpg') }}" id="image" alt="IMAGE"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
+{% endblock %}

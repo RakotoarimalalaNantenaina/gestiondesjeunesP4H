@@ -1,0 +1,83 @@
+#coef {
+    width: 50px;
+}
+h1 {
+    color:  darkslategray;
+    margin-left: 100px;
+    text-decoration-line: underline;
+}
+h3 {
+    color:  darkslategray;
+    text-decoration-line: underline;
+    margin-left: 100px;
+}
+li {
+    list-style-type: none;
+    float: left;
+    margin-left: 120px;
+    color: brown;
+    text-decoration-line: underline;
+}
+#a {
+    background-color: darkslategray;
+    border-radius: 20px;
+    height: 30px;
+    margin-left: 50px;
+}
+#b {
+    width: 50px;
+    background-color: brown;
+    border-radius: 20px;
+    height: 30px;
+    margin-left: 85px;
+}
+#c {
+    background-color: blueviolet;
+    margin-left: 130px;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    font-family: arial;
+    font-size: 20px;
+    border-color: blueviolet ;
+}
+#d {
+    background-color: darkslategray;
+    border-radius: 20px;
+    margin-left: 60px;
+    height: 30px;
+}
+#e {
+    background-color: darkslategray;
+    border-radius: 20px;
+    margin-left: 65px;
+    height: 30px;
+}
+#f {
+    background-color: darkslategray;
+    border-radius: 20px;
+    height: 30px;
+    margin-left: 20px;
+}
+#g {
+    background-color: darkslategray;
+    border-radius: 20px;
+    margin-left: 40px;
+    height: 30px;
+}
+#h {
+    background-color: darkslategray;
+    border-radius: 20px;
+    height: 30px;
+}
+#i {
+    background-color: darkslategray;
+    border-radius: 20px;
+    margin-left: 60px;
+    height: 30px;
+}
+body {
+    background-color: aqua;
+    margin-left: 500px;
+}

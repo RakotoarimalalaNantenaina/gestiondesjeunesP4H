@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+   <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" id="nouveau">
+                <img src="{{ asset('bundles/framework/images/image1.png') }}" id="image" alt="IMAGE"/>
+                <h1 id="h31">Nouveau recensements :</h1><br>
+                {{ form_start(form) }}
+                
+                {{ form_widget(form) }}<br>
+                    <input type="submit" value="Ajouter" class="btn btn-success"/>
+                {{ form_end(form) }}<br>
+                    <a href="{{ path('archive_index') }}" class="btn btn-primary">precedent</a>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+   </div>
+{% endblock %}
